@@ -2,6 +2,7 @@ cc_library (
 	name = "sorting",
 	hdrs = [
 		"00-quicksort.h",
+		"05-intersect.h"
 	],
 	srcs = [
 		"00-quicksort.cc",
@@ -11,7 +12,8 @@ cc_library (
 cc_test (
 	name = "all_tests",
 	srcs = [
-		"00-quicksort_test.cc"
+		"00-quicksort_test.cc",
+		"05-intersect_test.cc",
 	],
 	deps = [
 		":sorting",
@@ -21,7 +23,7 @@ cc_test (
 
 cc_test (
 	name = "current_test",
-	srcs = ["00-quicksort_test.cc"],
+	srcs = ["05-intersect_test.cc"],
 	deps = [
 		":sorting",
 		"@googletest//:gtest_main",
