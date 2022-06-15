@@ -5,6 +5,7 @@ cc_library (
 	],
 	srcs = [
 	],
+	visibility = [ "//visibility:public" ],
 )
 
 cc_test (

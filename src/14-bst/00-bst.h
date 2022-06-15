@@ -33,6 +33,10 @@ class BinarySearchTree {
 
 		bool Erase(const T& key);
 
+		const NodePtr root() const { 
+			return root_ ; 
+		}
+
 	private:
 		NodePtr root_;
 
@@ -178,7 +182,7 @@ bool BinarySearchTree<T>::Erase(const T& key) {
 }
 
 template<typename T>
-std::unique_ptr<BinarySearchTree<T>> Create(const std::vector<T> &keys) {
+std::unique_ptr<BinarySearchTree<T>> CreateBST(const std::vector<T> &keys) {
 	auto bst = std::unique_ptr<BinarySearchTree<T>>(new BinarySearchTree<T>());
 	for(const auto& key : keys) {
 		bst->Insert(key);

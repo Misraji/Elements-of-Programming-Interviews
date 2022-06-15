@@ -1,19 +1,25 @@
 cc_library (
 	name = "saq",
 	hdrs = [
-		"01-max-stack.h",
-		"02-rpn-notation.h",
+		"067-max-stack.h",
+		"068-rpn-notation.h",
+		"068-print-bst.h",
 	],
 	srcs = [
-		"02-rpn-notation.cc",
+		"068-rpn-notation.cc",
+
+	],
+	deps = [
+		"//src/14-bst:bst",
 	],
 )
 
 cc_test (
 	name = "all_tests",
 	srcs = [
-		"01-max-stack_test.cc",
-		"02-rpn-notation_test.cc",
+		"067-max-stack_test.cc",
+		"068-rpn-notation_test.cc",
+		"068-print-bst_test.cc",
 	],
 	deps = [
 		":saq",
@@ -24,7 +30,7 @@ cc_test (
 cc_test (
 	name = "current_test",
 	srcs = [
-		"02-rpn-notation_test.cc",
+		"068-print-bst_test.cc",
 	],
 	deps = [
 		":saq",

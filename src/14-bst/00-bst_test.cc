@@ -13,7 +13,7 @@ TEST(BinarySearchTree, EmptyTest) {
 }
 
 TEST(BinarySearchTree, SingleValueTest) {
-	auto bst = Create(std::vector<int>({1}));
+	auto bst = CreateBST(std::vector<int>({1}));
 
 	EXPECT_FALSE(bst->Empty());
 	EXPECT_TRUE(bst->Find(1));
@@ -29,7 +29,7 @@ TEST(BinarySearchTree, SingleValueTest) {
 }
 
 TEST(BinarySearchTree, TwoValuesTest) {
-	auto bst = Create(std::vector<int>({1, 2}));
+	auto bst = CreateBST(std::vector<int>({1, 2}));
 
 	EXPECT_FALSE(bst->Empty());
 	EXPECT_TRUE(bst->Find(1));
@@ -58,7 +58,7 @@ TEST(BinarySearchTree, TwoValuesTest) {
 
 TEST(BinarySearchTree, BalancedTreeTest) {
 
-	auto bst = Create(std::vector<int>({2, 1, 3}));
+	auto bst = CreateBST(std::vector<int>({2, 1, 3}));
 
 	EXPECT_TRUE(bst->Erase(2));
 	EXPECT_TRUE(bst->Erase(3));
