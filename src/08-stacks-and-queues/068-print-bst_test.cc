@@ -12,6 +12,15 @@ TEST(PrintBst, Empty) {
 	EXPECT_EQ(out.str(), "");
 }
 
+TEST(PrintBst, OneElement) {
+	BinarySearchTree<int> bst;
+	bst.Insert(1);
+
+	std::ostringstream out;
+	print_bst_in_sorted_order<int>(out, bst.root());
+	EXPECT_EQ(out.str(), "1,");
+}
+
 TEST(PrintBst, MultipleElements) {
 	auto bst = CreateBST(std::vector<int>({2, 1, 3}));
 
