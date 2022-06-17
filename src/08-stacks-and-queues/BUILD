@@ -4,9 +4,11 @@ cc_library (
 		"067-max-stack.h",
 		"068-rpn-notation.h",
 		"068-print-bst.h",
+		"069-towers-of-hanoi.h",
 	],
 	srcs = [
 		"068-rpn-notation.cc",
+		"069-towers-of-hanoi.cc",
 
 	],
 	deps = [
@@ -20,6 +22,7 @@ cc_test (
 		"067-max-stack_test.cc",
 		"068-rpn-notation_test.cc",
 		"068-print-bst_test.cc",
+		"069-towers-of-hanoi_test.cc",
 	],
 	deps = [
 		":saq",
@@ -30,7 +33,7 @@ cc_test (
 cc_test (
 	name = "current_test",
 	srcs = [
-		"068-print-bst_test.cc",
+		"069-towers-of-hanoi_test.cc",
 	],
 	deps = [
 		":saq",
